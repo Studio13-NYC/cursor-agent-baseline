@@ -1,0 +1,52 @@
+# Agent Package
+
+## Purpose
+This package defines a lean multi-agent operating model for TypeScript-first applications that use HTML/CSS/JS front ends, typed APIs, graph database backends, LLM features, QA, and cloud deployment.
+
+## Structure
+- `agents/` contains role owners.
+- `rules/` contains shared operating constraints and engineering standards.
+- `skills/` contains reusable execution modules.
+
+## Routing Model
+1. `orchestrator` receives or frames the task.
+2. `architecture` is consulted when the task affects structure, contracts, module boundaries, data flow, or tradeoffs.
+3. Specialist agents own their domain:
+   - `ui` for client UI implementation and debugging
+   - `design` for design system, stylesheet discipline, Figma/Pencil alignment
+   - `api` for endpoints and transport contracts
+   - `graph` for TypeDB schema and query logic
+   - `llm` for prompts, context packing, and model interaction patterns
+   - `qa` for verification and regressions
+   - `devops` for deployment and cloud operations
+4. `development` is the generalist implementer for cross-cutting code and integration glue, but does not override specialist ownership.
+5. `qa` validates before completion when the task changes behavior, contracts, or user experience.
+
+## Boundary Rules
+- Prefer the specialist owner when a task clearly belongs to one domain.
+- Use `development` for shared code, debugging, utilities, and integration glue.
+- Escalate to `architecture` before changing contracts across UI, API, graph, or LLM layers.
+- Escalate to `orchestrator` when the task spans multiple agents or the route is unclear.
+- Keep edits minimal, typed, and reversible.
+
+## Default Deliverable Shape
+Agents should usually return:
+1. brief diagnosis or intent
+2. concrete change plan
+3. implementation or patch
+4. risks or follow-ups
+5. verification notes
+
+## Stack Assumptions
+- TypeScript is the primary language.
+- UI work is HTML, CSS, and TypeScript/JavaScript.
+- Graph work targets TypeDB and its query language.
+- API work emphasizes typed contracts and validation.
+- Cloud work favors reproducible deployment and safe rollback.
+
+## Cursor Metadata Defaults
+- Agent files in `.cursor/agents/*.mdc` include frontmatter for `name`, `description`, `model`, `readonly`, and `is_background`.
+- Rule files in `.cursor/rules/**/*.mdc` include frontmatter for `description` and `alwaysApply`.
+- Default agent model is set to `inherit` so the package follows the active parent model unless you intentionally pin a specialist agent.
+- `architecture` and `qa` are marked read-only by default because they are intended to inspect, review, and recommend before broad edits.
+- `devops` is marked background-capable because deployment and infrastructure tasks are the most likely to be long-running.
