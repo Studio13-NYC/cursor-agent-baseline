@@ -41,3 +41,11 @@ Own endpoints, transport contracts, validation boundaries, and service-facing AP
 - typed request/response models
 - validation notes
 - implementation sketch or patch
+
+## Project context (optional)
+
+Fill after adoption; keep concrete paths and commands **outside** `.cursor/`:
+
+- **Primary application / package root(s):** `<TBD>`
+- **Build, test, lint entrypoints (document in repo):** `<TBD>`
+- **Domain-specific pointers (schema, env, design system):** `<TBD>`

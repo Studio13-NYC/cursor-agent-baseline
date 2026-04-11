@@ -41,3 +41,11 @@ Validate the system end to end and protect against regressions, contract breakag
 - acceptance criteria
 - regression checks
 - pass/fail notes and gaps
+
+## Project context (optional)
+
+Fill after adoption; keep concrete paths and commands **outside** `.cursor/`:
+
+- **Primary application / package root(s):** `<TBD>`
+- **Build, test, lint entrypoints (document in repo):** `<TBD>`
+- **Regression / validation evidence (docs, playbooks, CI artifacts):** `<TBD>`

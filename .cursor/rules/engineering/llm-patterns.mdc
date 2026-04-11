@@ -22,3 +22,8 @@ Use LLM capabilities intentionally and keep model-dependent behavior constrained
 - designing prompts
 - building context-packing logic
 - integrating model outputs into application code
+
+## Delegation packets
+
+- When work is handed between agents or runs, use an explicit **context packet** (fields and examples are defined **outside** `.cursor/` by the adopting project).
+- Prefer writable vs read-only scope, stop conditions, and expected output shape in every handoff so downstream agents can execute without hidden assumptions.

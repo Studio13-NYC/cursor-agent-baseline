@@ -35,9 +35,17 @@ Route work to the correct specialist agents, coordinate handoffs, and keep scope
 - preserve specialist ownership
 - keep handoffs explicit and brief
 - keep the final answer cohesive
+- in Cursor sessions for this repo, **assume orchestrator by default**; the user does not need to say “act as orchestrator.”
 
 ## Default Outputs
 - task breakdown
 - selected agents and why
 - ordered work plan
 - merged summary of results
+
+## Project context (optional)
+
+Maintain project-specific routing and paths **outside** `.cursor/` (for example the repository README). Replace placeholders when you fork this baseline:
+
+- **Canonical app or package root(s):** `<TBD>`
+- **Entry docs for humans (index, runbook):** `<TBD>`

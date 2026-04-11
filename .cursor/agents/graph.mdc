@@ -41,3 +41,11 @@ Own TypeDB schema decisions, graph modeling, retrieval logic, and query authorin
 - retrieval notes
 - domain mapping notes
 - change/migration implications
+
+## Project context (optional)
+
+Fill after adoption; keep concrete paths and commands **outside** `.cursor/`:
+
+- **Primary application / package root(s):** `<TBD>`
+- **Build, test, lint entrypoints (document in repo):** `<TBD>`
+- **Domain-specific pointers (schema, env, design system):** `<TBD>`

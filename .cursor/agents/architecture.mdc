@@ -42,3 +42,11 @@ Own overall technical design and protect structural coherence across the system.
 - responsibilities by layer
 - contract notes
 - tradeoffs and recommended path
+
+## Project context (optional)
+
+Fill after adoption; keep concrete paths and commands **outside** `.cursor/`:
+
+- **Primary application / package root(s):** `<TBD>`
+- **Build, test, lint entrypoints (document in repo):** `<TBD>`
+- **Domain-specific pointers (schema, env, design system):** `<TBD>`

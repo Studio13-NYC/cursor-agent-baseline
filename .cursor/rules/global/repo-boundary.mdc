@@ -1,0 +1,19 @@
+---
+description: Canonical repo boundary when this baseline coexists with sibling or template trees.
+alwaysApply: true
+---
+
+# Repository boundary
+
+**This repository** (the tree that contains this `.cursor/` package and your application source) is the **writable source of truth** for work you intend to ship from here.
+
+## Other folders in the workspace
+
+- **Sibling or template clones** (for example a starter you copied from) are **read-only references** unless you explicitly open them for editing. Do not treat them as the delivery target when the task is scoped to this repo.
+- **Authoritative policy for agents, rules, and skills** lives under **`.cursor/`** in this repository. Application layout, docs, and scripts are **project-specific**—describe them outside `.cursor/` (README, contributing guide, or internal docs).
+
+## Rules
+
+- Prefer in-repo documentation and code over informal external notes.
+- Do not treat another checkout or fork as authoritative for this repo’s contracts unless that is an intentional submodule or shared library boundary.
+- External vendor or cloud documentation is fine for reference; avoid duplicating it as a competing source of truth inside the repo without review.

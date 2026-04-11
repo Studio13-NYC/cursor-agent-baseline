@@ -42,3 +42,11 @@ Own deployment, cloud services, runtime configuration, release safety, and opera
 - environment/config notes
 - pipeline or infra patch
 - rollout and rollback notes
+
+## Project context (optional)
+
+Fill after adoption; keep concrete paths and commands **outside** `.cursor/`:
+
+- **Primary application / package root(s):** `<TBD>`
+- **Build, test, lint entrypoints (document in repo):** `<TBD>`
+- **Domain-specific pointers (schema, env, design system):** `<TBD>`
